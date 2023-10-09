@@ -27,8 +27,20 @@ class PagingListView extends StatefulWidget {
                   backgroundColor: Colors.grey[200],
                   backgroundImage: NetworkImage(item["thumbnail"]),
                 ),
-                title: Text(item["title"]),
-                subtitle: Text("\$${item["price"]}"),
+                title: Text(
+                  item["title"],
+                  overflow: TextOverflow.ellipsis,
+                ),
+                subtitle: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      item["brand"],
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                    Text("\$${item["price"]}"),
+                  ],
+                ),
               ),
             );
           },

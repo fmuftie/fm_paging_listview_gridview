@@ -65,6 +65,12 @@ class PagingGridView extends StatefulWidget {
                   height: 4.0,
                 ),
                 Text(
+                  item["brand"],
+                  style: const TextStyle(
+                    fontSize: 14.0,
+                  ),
+                ),
+                Text(
                   "\$${item["price"]}",
                   style: const TextStyle(
                     fontSize: 16.0,
